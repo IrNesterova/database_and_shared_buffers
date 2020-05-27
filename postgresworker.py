@@ -41,7 +41,6 @@ class Worker():
         return val
 
     def execAlterSystem(self):
-
         with self.conn:
             with self.conn.cursor(cursor_factory=DictCursor) as cur:
                 cur.execute("ALTER SYSTEM set shared_buffers TO '2048MB';")
